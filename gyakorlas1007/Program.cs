@@ -21,6 +21,19 @@ namespace gyakorlas1007
 			szamtani_kozep = ((double)x + y) / 2;
 			mertani_kozep = Math.Sqrt(x * y);
 			Console.WriteLine("Számtani közép: {0:0.00}\nMértani közép: {1:0.00}", szamtani_kozep, mertani_kozep);
+
+			// 2. feladat: Írj programot, mely beolvassa a téglatest három élének hosszát, és kiírja a felszínének és térfogatának mérőszámát!
+			double a, b, c, felszin, terfogat;
+			Console.WriteLine("2. feladat");
+			Console.Write("Adja meg a téglatest első élét: ");
+			a = Convert.ToDouble(Console.ReadLine());
+			Console.Write("Adja meg a téglatest második élét: ");
+			b = Convert.ToDouble(Console.ReadLine());
+			Console.Write("Adja meg a téglatest harmadik élét: ");
+			c = Convert.ToDouble(Console.ReadLine());
+			felszin = 2 * (a * b + a * c + c * b);
+			terfogat = a * b * c;
+			Console.WriteLine("A téglatest felszíne: {0:0.00}, térfogata: {1:0.00}", felszin, terfogat);
 		}
 	}
 }
