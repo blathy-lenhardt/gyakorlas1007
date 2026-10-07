@@ -123,6 +123,21 @@ namespace gyakorlas1007
 			{
 				Console.WriteLine("A {0}°C fokos víz, folyékony", vhomerseklet);
 			}
+
+			// 6. feladat: Írjunk programot, amely bekéri két pont koordinátáit, majd kiszámolja azok távolságát.
+			//	(A távolság a két pont közé eső szakasz hossza, melyet a pontok koordinátáiból könnyedén kiszámolhatunk.
+			//	gyök((x1 - x2) * (x1 - x2) + (y2 - y1) * (y2 - y1)))
+			int[,] coordinates = { { 0, 0 }, { 0, 0 } };
+			double distance;
+			Console.WriteLine("6. feladat");
+			Console.Write("Adja meg az első pont koordinátáit: (x ENTER y) ");
+			coordinates[0, 0] = Convert.ToInt32(Console.ReadLine());
+			coordinates[0, 1] = Convert.ToInt32(Console.ReadLine());
+			Console.Write("Adja meg a második pont koordinátáit: (x ENTER y) ");
+			coordinates[1, 0] = Convert.ToInt32(Console.ReadLine());
+			coordinates[1, 1] = Convert.ToInt32(Console.ReadLine());
+			distance = Math.Sqrt(Math.Pow(coordinates[0, 0] - coordinates[1, 0], 2) + Math.Pow(coordinates[0, 1] - coordinates[1, 1], 2));
+			Console.WriteLine("A két pont távolsága: {0:0.00}", distance);
 		}
 	}
 }
