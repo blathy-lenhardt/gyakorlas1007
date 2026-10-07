@@ -195,6 +195,42 @@ namespace gyakorlas1007
 				siknegyed = siknegyed + "felső";
 			}
 			Console.WriteLine("A {0}x {1}y pont a {2} síknegyedben van.", c_x, c_y, siknegyed);
+
+			/* 9. feladat: A középszintű érettségin maximum 150 pont szerezhető.
+			 	Kérje be egy tanuló elért pontszámát és írja ki milyen érdemjegyet kapott (betűvel és számmal)
+			 	ha a százalékos értékelés a következő:
+					0-19% - 1 elégtelen
+					20-39% - 2 elégséges
+					40-59% - 3 közepes
+					60-79% - 4 jó
+					80-100% - 5 jeles
+			*/
+			double pont;
+			double szazalek;
+			Console.WriteLine("9. feladat");
+			Console.Write("Adja meg a pontszámát: ");
+			pont = Convert.ToUInt32(Console.ReadLine());
+			szazalek = 100 / (150 / pont);
+			if (szazalek < 20)
+			{
+				Console.WriteLine("1 elégtelen");
+			}
+			else if (szazalek < 40)
+			{
+				Console.WriteLine("2 elégséges");
+			}
+			else if (szazalek < 60)
+			{
+				Console.WriteLine("3 közepes");
+			}
+			else if (szazalek < 80)
+			{
+				Console.WriteLine("4 jó");
+			}
+			else
+			{
+				Console.WriteLine("5 jeles");
+			}
 		}
 	}
 }
