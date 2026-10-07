@@ -104,6 +104,25 @@ namespace gyakorlas1007
 			{
 				Console.WriteLine("3. fokú (súlyos) elhízás");
 			}
+
+			// 5. feladat: Készítsünk programot, amely bekéri a víz hőmérsékletét, majd eldönti, hogy az milyen halmazállapotú.
+			//	A halmazállapot lehet folyékony, gőz, vagy jég.
+			int vhomerseklet;
+			Console.WriteLine("5. feladat");
+			Console.Write("Adja meg a víz hőmérsékletét °C-ban: ");
+			vhomerseklet = Convert.ToInt32(Console.ReadLine());
+			if (vhomerseklet < 0)
+			{
+				Console.WriteLine("A {0}°C fokos víz, szilárd halmazállapotú", vhomerseklet);
+			}
+			else if (vhomerseklet > 100)
+			{
+				Console.WriteLine("A {0}°C fokos víz, gáz halmazállapotú", vhomerseklet);
+			}
+			else
+			{
+				Console.WriteLine("A {0}°C fokos víz, folyékony", vhomerseklet);
+			}
 		}
 	}
 }
