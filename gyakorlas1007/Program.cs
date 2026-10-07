@@ -60,6 +60,50 @@ namespace gyakorlas1007
 				Console.WriteLine("Hibás bemenet, c vagy f betűt adjon meg.");
 				goto Convert;
 			}
+
+			// 4. feladat: Írjunk programot, mely a testsúly és a testmagasság alapján meghatározza a testtömegindexet,
+			//	és kiírja, hogy milyen testsúly osztályba tartozik az adott illető.
+			//	A testtömeg osztályokat meghatározhatjuk tetszőlegesen, de alapul vehetünk létező osztályozásokat is.
+			// Testtömegindex = Testtömeg[kg] / Testmagasság ^ 2[m ^ 2]
+			double tomeg, magassag, testtomegindex;
+			Console.WriteLine("4. feladat");
+			Console.Write("Adja meg a testsúlyát kilogrammban: ");
+			tomeg = Convert.ToDouble(Console.ReadLine());
+			Console.Write("Adja meg testmagasságát méterben: ");
+			magassag = Convert.ToDouble(Console.ReadLine());
+			testtomegindex = tomeg / Math.Pow(magassag, 2);
+			if (testtomegindex < 16)
+			{
+				Console.WriteLine("Súlyos soványság");
+			}
+			else if (testtomegindex < 17)
+			{
+				Console.WriteLine("Mérsékelt soványság");
+			}
+			else if (testtomegindex < 18.5)
+			{
+				Console.WriteLine("Enyhe soványság");
+			}
+			else if (testtomegindex < 25)
+			{
+				Console.WriteLine("Normális testsúly");
+			}
+			else if (testtomegindex < 30)
+			{
+				Console.WriteLine("Túlsúlyos");
+			}
+			else if (testtomegindex < 35)
+			{
+				Console.WriteLine("1. fokú elhízás");
+			}
+			else if (testtomegindex < 40)
+			{
+				Console.WriteLine("2. fokú elhízás");
+			}
+			else
+			{
+				Console.WriteLine("3. fokú (súlyos) elhízás");
+			}
 		}
 	}
 }
