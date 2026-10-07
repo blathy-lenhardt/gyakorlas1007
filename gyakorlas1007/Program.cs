@@ -42,7 +42,7 @@ namespace gyakorlas1007
 			Console.WriteLine("3. feladat");
 			Console.Write("Adja meg a hőmérsékletet: ");
 			homerseklet = Convert.ToDouble(Console.ReadLine());
-			Convert: Console.Write("Milyen hőmérsékletbe váltsa át? (c/f) ");
+		Convert: Console.Write("Milyen hőmérsékletbe váltsa át? (c/f) ");
 			answer = Convert.ToChar(Console.ReadLine());
 			if (answer == 'c')
 			{
@@ -138,6 +138,38 @@ namespace gyakorlas1007
 			coordinates[1, 1] = Convert.ToInt32(Console.ReadLine());
 			distance = Math.Sqrt(Math.Pow(coordinates[0, 0] - coordinates[1, 0], 2) + Math.Pow(coordinates[0, 1] - coordinates[1, 1], 2));
 			Console.WriteLine("A két pont távolsága: {0:0.00}", distance);
+
+			// 7. feladat: Írjon egy programot, ami leosztályoz egy maximálisan 100 pontos dolgozatot az 50, 65, 80, 90 ponthatárok szerint!
+			//	A határérték a jobb jegyhez tartozik. Ha a pontszám negatív vagy száznál nagyobb,
+			//	akkor a program írja ki, hogy hibás az adat!
+			int pontszam;
+			Console.WriteLine("7. feladat");
+			Console.Write("Adja meg a pontszámát: ");
+			pontszam = Convert.ToInt32(Console.ReadLine());
+			if (pontszam < 0 || pontszam > 100)
+			{
+				Console.WriteLine("Hibás az adat!");
+			}
+			else if (pontszam < 50)
+			{
+				Console.WriteLine("Elégtelen");
+			}
+			else if (pontszam < 65)
+			{
+				Console.WriteLine("Elégséges");
+			}
+			else if (pontszam < 80)
+			{
+				Console.WriteLine("Közepes");
+			}
+			else if (pontszam < 90)
+			{
+				Console.WriteLine("Jó");
+			}
+			else
+			{
+				Console.WriteLine("Kitűnő");
+			}
 		}
 	}
 }
