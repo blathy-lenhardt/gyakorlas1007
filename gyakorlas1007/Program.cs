@@ -34,6 +34,32 @@ namespace gyakorlas1007
 			felszin = 2 * (a * b + a * c + c * b);
 			terfogat = a * b * c;
 			Console.WriteLine("A téglatest felszíne: {0:0.00}, térfogata: {1:0.00}", felszin, terfogat);
+
+			// 3. feladat: Készítsünk programot, mely bekér egy hőmérséklet értéket,
+			//	majd felajánlja, hogy Celsiusból Fahrenheitbe, vagy Fahrenheitből Celsiusba váltja át.
+			double homerseklet;
+			char answer;
+			Console.WriteLine("3. feladat");
+			Console.Write("Adja meg a hőmérsékletet: ");
+			homerseklet = Convert.ToDouble(Console.ReadLine());
+			Convert: Console.Write("Milyen hőmérsékletbe váltsa át? (c/f) ");
+			answer = Convert.ToChar(Console.ReadLine());
+			if (answer == 'c')
+			{
+				Console.Write("{0:0.00}°F = ", homerseklet);
+				homerseklet = (homerseklet - 32) * ((double)5 / 9);
+				Console.WriteLine("{0:0.00}°C", homerseklet);
+			} else if (answer == 'f')
+			{
+				Console.Write("{0:0.00}°C = ", homerseklet);
+				homerseklet = homerseklet * ((double)9 / 5) + 32;
+				Console.WriteLine("{0:0.00}°F", homerseklet);
+			}
+			else
+			{
+				Console.WriteLine("Hibás bemenet, c vagy f betűt adjon meg.");
+				goto Convert;
+			}
 		}
 	}
 }
