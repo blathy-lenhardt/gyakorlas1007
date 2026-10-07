@@ -170,6 +170,31 @@ namespace gyakorlas1007
 			{
 				Console.WriteLine("Kitűnő");
 			}
+
+			// 8. feladat: Adott egy tetszőleges pont koordinátáival. Határozza meg, melyik síknegyedben van!
+			int c_x, c_y;
+			string siknegyed = "";
+			Console.WriteLine("8. feladat");
+			Console.Write("Adja meg a pont koordinátáit: (x ENTER y) ");
+			c_x = Convert.ToInt32(Console.ReadLine());
+			c_y = Convert.ToInt32(Console.ReadLine());
+			if (c_x < 0)
+			{
+				siknegyed = "bal";
+			}
+			else
+			{
+				siknegyed = "jobb";
+			}
+			if (c_y < 0)
+			{
+				siknegyed = siknegyed + "alsó";
+			}
+			else
+			{
+				siknegyed = siknegyed + "felső";
+			}
+			Console.WriteLine("A {0}x {1}y pont a {2} síknegyedben van.", c_x, c_y, siknegyed);
 		}
 	}
 }
